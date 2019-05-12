@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="vue-app">
+      <h1>name:{{ name }}</h1>
+      <h2>{{ greet('value') }}</h2>
+      <p>Job:{{ job }}</p>
+      <a v-bind:href="website">webHttp</a>
+      <input type="text" v-bind:value="name">
+      <p v-html='websiteTag'></p>
+      <button v-on:click='add(1)'>+</button>
+      <button v-on:click='subtract(1)'>-</button>
+      <button v-on:dblclick='add(10)'>+</button>
+      <button v-on:dblclick='subtract(10)'>-</button>
+      <p>My age is {{ age }}</p>
+      <div id="canvas" v-on:mousemove="updateXY"> 
+        {{x}} ,{{y}} - <span v-on:mousemove.stop>Stop</span>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
